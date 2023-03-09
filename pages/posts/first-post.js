@@ -18,9 +18,7 @@ export default function FirstPost({post}){
                 <title>{post.title +  ' | Next Blog'}</title>
             </Head>
             <h1>{post.title}</h1>
-            <p>
-                {post.body}
-            </p>
+            <article dangerouslySetInnerHTML={{__html: post.body}}/>
         </main>
     )
 }
