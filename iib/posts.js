@@ -20,3 +20,13 @@ export async function getSlugs() {
         .filter((file) => file.endsWith(sufix))
         .map((file) => file.slice(0,  -sufix.length))
 }
+
+export async function getPosts() {
+    const slugs = await getSlugs();
+    const posts = [];
+    for (const slug of slugs) {
+        const post = await getPost(slug);
+        posts.push({slug, ...post})
+    }
+    return posts
+}
