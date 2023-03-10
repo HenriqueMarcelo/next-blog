@@ -1,9 +1,18 @@
+/*Light theme*/
+:root{
+    --background-color: floralwhite;
+    --link-color: darkred;
+    --text-color: #121212;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 a {
-    color: darkred;
+    color: var(--link-color);
     text-decoration: none;
 }
 
